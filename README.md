@@ -1,3 +1,5 @@
+_NOTE: Roombalib is currently work in progress and must be considered unstable_
+
 # roombalib
 
 
