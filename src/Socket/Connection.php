@@ -4,7 +4,6 @@
  * User: Maarten van Leeuwen <maarten@sigbits.nl>
  * Date: 18/11/2016
  */
-
 namespace Sigbits\RoombaLib\Socket;
 
 /**
