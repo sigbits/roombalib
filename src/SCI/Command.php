@@ -5,7 +5,7 @@
  * Date: 22/11/2016
  */
 
-namespace Sigbits\RoombaLib;
+namespace Sigbits\RoombaLib\SCI;
 
 /**
  * Commands consist of a single byte opcode and optionally a string of databytes

@@ -1,7 +1,7 @@
 <?php
 namespace Sigbits\RoombaLib\OperatingMode;
 
-use Sigbits\RoombaLib\OperatingMode;
+use Sigbits\RoombaLib\SCI\OperatingMode;
 
 
 /**

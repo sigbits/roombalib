@@ -1,5 +1,5 @@
 <?php
-namespace Sigbits\RoombaLib;
+namespace Sigbits\RoombaLib\SCI;
 
 /**
  * Created by PhpStorm.

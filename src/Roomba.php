@@ -21,9 +21,9 @@ class Roomba
 
     /**
      * Sends a command to the connection
-     * @param \Sigbits\RoombaLib\Command $command
+     * @param \Sigbits\RoombaLib\SCI\Command $command
      */
-    public function execute(\Sigbits\RoombaLib\Command $command)
+    public function execute(\Sigbits\RoombaLib\SCI\Command $command)
     {
         // @todo implement 
     }

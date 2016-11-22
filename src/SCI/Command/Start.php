@@ -1,7 +1,7 @@
 <?php
 namespace Sigbits\RoombaLib\SCI\Command;
 
-use Sigbits\RoombaLib\Command;
+use Sigbits\RoombaLib\SCI\Command;
 
 /**
  * Created by PhpStorm.
