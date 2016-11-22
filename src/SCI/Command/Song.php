@@ -1,6 +1,8 @@
 <?php
 namespace Sigbits\RoombaLib\SCI\Command;
 
+use Sigbits\RoombaLib\Command\Opcode;
+
 /**
  * Created by PhpStorm.
  * User: Maarten van Leeuwen <maarten@sigbits.nl>

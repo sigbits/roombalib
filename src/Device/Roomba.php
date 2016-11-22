@@ -1,4 +1,6 @@
 <?php
+namespace Sigbits\RoombaLib\Device;
+
 use Sigbits\RoombaLib\Socket\Connection;
 
 /**
@@ -25,6 +27,6 @@ class Roomba
      */
     public function execute(\Sigbits\RoombaLib\SCI\Command $command)
     {
-        // @todo implement 
+        var_dump($command);
     }
 }
