@@ -16,15 +16,32 @@ namespace Sigbits\RoombaLib\SCI;
 abstract class Command
 {
     /**
-     * @return string represents a byte
+     * @var int
      */
-    abstract public function getOpcode();
+    private $opcode;
+
+    /**
+     * Command constructor.
+     * @param int $opcode
+     */
+    public function __construct($opcode)
+    {
+        $this->opcode = $opcode;
+    }
+
+    /**
+     * @return int
+     */
+    public function getOpcode()
+    {
+        return $this->opcode;
+    }
 
     /**
      * @return string
      */
     public function asByteString()
     {
-        return pack("C*", $this->getOpcode());
+        return pack("C", $this->getOpcode());
     }
 }

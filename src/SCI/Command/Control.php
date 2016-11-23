@@ -12,10 +12,10 @@ use Sigbits\RoombaLib\SCI\Command;
 class Control extends Command
 {
     /**
-     * @return string represents a byte
+     * Control constructor.
      */
-    public function getOpcode()
+    public function __construct()
     {
-        return Opcode::CONTROL;
+        parent::__construct(Opcode::CONTROL);
     }
 }

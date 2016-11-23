@@ -27,8 +27,9 @@ abstract class AbstractDataCommand extends Command
      * AbstractDataCommand constructor.
      * @param $data
      */
-    public function __construct($data)
+    public function __construct($opcode, $data)
     {
+        parent::__construct($opcode);
         $this->data = $data;
     }
 

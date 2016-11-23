@@ -11,10 +11,10 @@ use Sigbits\RoombaLib\SCI\Opcode;
 class Drive extends AbstractDataCommand
 {
     /**
-     * @return string represents a byte
+     * Drive constructor.
      */
-    public function getOpcode()
+    public function __construct($data)
     {
-        return Opcode::DRIVE;
+        parent::__construct(Opcode::DRIVE, $data);
     }
 }

@@ -10,10 +10,10 @@ use Sigbits\RoombaLib\SCI\Opcode;
 class Baud extends AbstractDataCommand
 {
     /**
-     * @return string represents a byte
+     * Baud constructor.
      */
-    public function getOpcode()
+    public function __construct($data)
     {
-        return Opcode::BAUD;
+        parent::__construct(Opcode::BAUD, $data);
     }
 }

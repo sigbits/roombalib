@@ -11,10 +11,10 @@ use Sigbits\RoombaLib\SCI\Opcode;
 class Play extends AbstractDataCommand
 {
     /**
-     * @return string represents a byte
+     * Play constructor.
      */
-    public function getOpcode()
+    public function __construct($data)
     {
-        return Opcode::PLAY;
+        parent::__construct(Opcode::PLAY, $data);
     }
 }

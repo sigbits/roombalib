@@ -12,10 +12,10 @@ use Sigbits\RoombaLib\SCI\Command;
 class Power extends Command
 {
     /**
-     * @return string represents a byte
+     * Power constructor.
      */
-    public function getOpcode()
+    public function __construct()
     {
-        return Opcode::POWER;
+        parent::__construct(Opcode::POWER);
     }
 }

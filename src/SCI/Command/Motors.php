@@ -11,10 +11,10 @@ use Sigbits\RoombaLib\SCI\Opcode;
 class Motors extends AbstractDataCommand
 {
     /**
-     * @return string represents a byte
+     * Motors constructor.
      */
-    public function getOpcode()
+    public function __construct($data)
     {
-        return Opcode::MOTORS;
+        parent::__construct(Opcode::MOTORS, $data);
     }
 }

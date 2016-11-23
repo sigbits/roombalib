@@ -11,10 +11,10 @@ use Sigbits\RoombaLib\SCI\Opcode;
 class Sensors extends AbstractDataCommand
 {
     /**
-     * @return string represents a byte
+     * Sensors constructor.
      */
-    public function getOpcode()
+    public function __construct($data)
     {
-        return Opcode::SENSORS;
+        parent::__construct(Opcode::SENSORS, $data);
     }
 }

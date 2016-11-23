@@ -12,10 +12,10 @@ use Sigbits\RoombaLib\SCI\Command;
 class Full extends Command
 {
     /**
-     * @return string represents a byte
+     * Full constructor.
      */
-    public function getOpcode()
+    public function __construct()
     {
-        return Opcode::FULL;
+        parent::__construct(Opcode::FULL);
     }
 }

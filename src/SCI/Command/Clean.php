@@ -12,10 +12,10 @@ use Sigbits\RoombaLib\SCI\Command;
 class Clean extends Command
 {
     /**
-     * @return string represents a byte
+     * Clean constructor.
      */
-    public function getOpcode()
+    public function __construct()
     {
-        return Opcode::CLEAN;
+        parent::__construct(Opcode::CLEAN);
     }
 }

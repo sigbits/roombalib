@@ -12,10 +12,10 @@ use Sigbits\RoombaLib\SCI\Command;
 class ForceSeekingDock extends Command
 {
     /**
-     * @return string represents a byte
+     * ForceSeekingDock constructor.
      */
-    public function getOpcode()
+    public function __construct()
     {
-        return Opcode::FORCE_SEEKING_DOCK;
+        parent::__construct(Opcode::FORCE_SEEKING_DOCK);
     }
 }

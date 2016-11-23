@@ -12,10 +12,10 @@ use Sigbits\RoombaLib\SCI\Command;
 class Safe extends Command
 {
     /**
-     * @return string represents a byte
+     * Safe constructor.
      */
-    public function getOpcode()
+    public function __construct()
     {
-        return Opcode::SAFE;
+        parent::__construct(Opcode::SAFE);
     }
 }

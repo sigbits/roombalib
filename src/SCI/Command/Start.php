@@ -12,10 +12,10 @@ use Sigbits\RoombaLib\SCI\Command;
 class Start extends Command
 {
     /**
-     * @return string represents a byte
+     * Start constructor.
      */
-    public function getOpcode()
+    public function __construct()
     {
-        return Opcode::START;
+        parent::__construct(Opcode::START);
     }
 }

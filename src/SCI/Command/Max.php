@@ -12,10 +12,10 @@ use Sigbits\RoombaLib\SCI\Command;
 class Max extends Command
 {
     /**
-     * @return string represents a byte
+     * Max constructor.
      */
-    public function getOpcode()
+    public function __construct()
     {
-        return Opcode::MAX;
+        parent::__construct(Opcode::MAX);
     }
 }

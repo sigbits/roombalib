@@ -11,10 +11,10 @@ use Sigbits\RoombaLib\SCI\Opcode;
 class Song extends AbstractDataCommand
 {
     /**
-     * @return string represents a byte
+     * Song constructor.
      */
-    public function getOpcode()
+    public function __construct($data)
     {
-        return Opcode::SONG;
+        parent::__construct(Opcode::SONG, $data);
     }
 }

@@ -11,10 +11,10 @@ use Sigbits\RoombaLib\SCI\Opcode;
 class Leds extends AbstractDataCommand
 {
     /**
-     * @return string represents a byte
+     * Leds constructor.
      */
-    public function getOpcode()
+    public function __construct($data)
     {
-        return Opcode::LEDS;
+        parent::__construct(Opcode::LEDS, $data);
     }
 }

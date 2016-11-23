@@ -12,10 +12,10 @@ use Sigbits\RoombaLib\SCI\Command;
 class Spot extends Command
 {
     /**
-     * @return string represents a byte
+     * Spot constructor.
      */
-    public function getOpcode()
+    public function __construct()
     {
-        return Opcode::SPOT;
+        parent::__construct(Opcode::SPOT);
     }
 }
