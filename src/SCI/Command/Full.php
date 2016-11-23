@@ -16,6 +16,6 @@ class Full extends Command
      */
     public function __construct()
     {
-        parent::__construct(Opcode::FULL);
+        parent::__construct(new Opcode(Opcode::FULL));
     }
 }

@@ -15,6 +15,6 @@ class Motors extends AbstractDataCommand
      */
     public function __construct($data)
     {
-        parent::__construct(Opcode::MOTORS, $data);
+        parent::__construct(new Opcode(Opcode::MOTORS, $data));
     }
 }

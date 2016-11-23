@@ -15,6 +15,6 @@ class Leds extends AbstractDataCommand
      */
     public function __construct($data)
     {
-        parent::__construct(Opcode::LEDS, $data);
+        parent::__construct(new Opcode(Opcode::LEDS, $data));
     }
 }

@@ -15,6 +15,6 @@ class Play extends AbstractDataCommand
      */
     public function __construct($data)
     {
-        parent::__construct(Opcode::PLAY, $data);
+        parent::__construct(new Opcode(Opcode::PLAY, $data));
     }
 }

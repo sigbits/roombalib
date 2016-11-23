@@ -16,6 +16,6 @@ class Power extends Command
      */
     public function __construct()
     {
-        parent::__construct(Opcode::POWER);
+        parent::__construct(new Opcode(Opcode::POWER));
     }
 }

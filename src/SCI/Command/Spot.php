@@ -16,6 +16,6 @@ class Spot extends Command
      */
     public function __construct()
     {
-        parent::__construct(Opcode::SPOT);
+        parent::__construct(new Opcode(Opcode::SPOT));
     }
 }

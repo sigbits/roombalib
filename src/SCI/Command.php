@@ -24,13 +24,13 @@ abstract class Command
      * Command constructor.
      * @param int $opcode
      */
-    public function __construct($opcode)
+    public function __construct(Opcode $opcode)
     {
         $this->opcode = $opcode;
     }
 
     /**
-     * @return int
+     * @return Opcode
      */
     public function getOpcode()
     {
@@ -42,6 +42,6 @@ abstract class Command
      */
     public function asByteString()
     {
-        return pack("C", $this->getOpcode());
+        return pack("C", $this->getOpcode()->getValue());
     }
 }

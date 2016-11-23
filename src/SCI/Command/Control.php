@@ -16,6 +16,6 @@ class Control extends Command
      */
     public function __construct()
     {
-        parent::__construct(Opcode::CONTROL);
+        parent::__construct(new Opcode(Opcode::CONTROL));
     }
 }

@@ -16,6 +16,6 @@ class ForceSeekingDock extends Command
      */
     public function __construct()
     {
-        parent::__construct(Opcode::FORCE_SEEKING_DOCK);
+        parent::__construct(new Opcode(Opcode::FORCE_SEEKING_DOCK));
     }
 }

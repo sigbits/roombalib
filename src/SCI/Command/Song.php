@@ -15,6 +15,6 @@ class Song extends AbstractDataCommand
      */
     public function __construct($data)
     {
-        parent::__construct(Opcode::SONG, $data);
+        parent::__construct(new Opcode(Opcode::SONG, $data));
     }
 }

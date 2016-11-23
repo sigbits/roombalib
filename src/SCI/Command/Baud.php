@@ -14,6 +14,6 @@ class Baud extends AbstractDataCommand
      */
     public function __construct($data)
     {
-        parent::__construct(Opcode::BAUD, $data);
+        parent::__construct(new Opcode(Opcode::BAUD), $data);
     }
 }

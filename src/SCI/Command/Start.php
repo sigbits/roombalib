@@ -16,6 +16,6 @@ class Start extends Command
      */
     public function __construct()
     {
-        parent::__construct(Opcode::START);
+        parent::__construct(new Opcode(Opcode::START));
     }
 }

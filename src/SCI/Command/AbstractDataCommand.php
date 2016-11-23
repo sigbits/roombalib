@@ -8,6 +8,7 @@
 namespace Sigbits\RoombaLib\SCI\Command;
 
 use Sigbits\RoombaLib\SCI\Command;
+use Sigbits\RoombaLib\SCI\Opcode;
 
 /**
  * Data commands carry optional data
@@ -25,9 +26,10 @@ abstract class AbstractDataCommand extends Command
 
     /**
      * AbstractDataCommand constructor.
+     * @param Opcode $opcode
      * @param $data
      */
-    public function __construct($opcode, $data)
+    public function __construct(Opcode $opcode, $data)
     {
         parent::__construct($opcode);
         $this->data = $data;
@@ -46,6 +48,6 @@ abstract class AbstractDataCommand extends Command
      */
     public function asByteString()
     {
-        return pack("C*", $this->getOpcode() . $this->getData());
+        return pack("C*", $this->getOpcode()->getValue() . $this->getData());
     }
 }

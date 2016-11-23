@@ -16,6 +16,6 @@ class Safe extends Command
      */
     public function __construct()
     {
-        parent::__construct(Opcode::SAFE);
+        parent::__construct(new Opcode(Opcode::SAFE));
     }
 }

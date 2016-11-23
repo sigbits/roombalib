@@ -15,6 +15,6 @@ class Drive extends AbstractDataCommand
      */
     public function __construct($data)
     {
-        parent::__construct(Opcode::DRIVE, $data);
+        parent::__construct(new Opcode(Opcode::DRIVE, $data));
     }
 }

@@ -15,6 +15,6 @@ class Sensors extends AbstractDataCommand
      */
     public function __construct($data)
     {
-        parent::__construct(Opcode::SENSORS, $data);
+        parent::__construct(new Opcode(Opcode::SENSORS, $data));
     }
 }

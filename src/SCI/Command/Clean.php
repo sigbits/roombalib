@@ -16,6 +16,6 @@ class Clean extends Command
      */
     public function __construct()
     {
-        parent::__construct(Opcode::CLEAN);
+        parent::__construct(new Opcode(Opcode::CLEAN));
     }
 }

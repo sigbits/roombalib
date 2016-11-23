@@ -16,6 +16,6 @@ class Max extends Command
      */
     public function __construct()
     {
-        parent::__construct(Opcode::MAX);
+        parent::__construct(new Opcode(Opcode::MAX));
     }
 }
