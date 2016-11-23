@@ -1,7 +1,7 @@
 <?php
 namespace Sigbits\RoombaLib\SCI\Command;
 
-use Sigbits\RoombaLib\Command\Opcode;
+use Sigbits\RoombaLib\SCI\Opcode;
 
 /**
  * Created by PhpStorm.

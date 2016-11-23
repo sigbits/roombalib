@@ -27,6 +27,6 @@ class Roomba
      */
     public function execute(\Sigbits\RoombaLib\SCI\Command $command)
     {
-        var_dump($command);
+        $this->connection->write($command);
     }
 }

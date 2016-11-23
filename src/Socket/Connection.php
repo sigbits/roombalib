@@ -6,6 +6,9 @@
  */
 namespace Sigbits\RoombaLib\Socket;
 
+use Sigbits\RoombaLib\SCI\Command;
+use Sigbits\RoombaLib\SCI\Command\AbstractDataCommand;
+
 /**
  * Represents a socket connection to a Roomba
  * Class Connection
@@ -34,7 +37,7 @@ class Connection
      * @param int $port
      * @param int $timeout
      */
-    public function __create($host, $port = 9001, $timeout = 30)
+    public function __construct($host, $port = 9001, $timeout = 30)
     {
         $this->client = stream_socket_client(
             sprintf('tcp://%s:%d',$host, $port),
@@ -46,5 +49,11 @@ class Connection
         $this->lastErrorMessage = $errorMessage;
     }
 
-
+    /**
+     * @param Command $data
+     */
+    public function write(Command $command)
+    {
+        fwrite($this->client, $command->asByteString());
+    }
 }

@@ -13,11 +13,18 @@ namespace Sigbits\RoombaLib\SCI;
  * Interface Command
  * @package Sigbits\RoombaLib
  */
-interface Command
+abstract class Command
 {
-
     /**
      * @return string represents a byte
      */
-    public function getOpcode();
+    abstract public function getOpcode();
+
+    /**
+     * @return string
+     */
+    public function asByteString()
+    {
+        return pack("C*", $this->getOpcode());
+    }
 }
