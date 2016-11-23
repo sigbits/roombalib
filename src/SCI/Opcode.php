@@ -7,11 +7,13 @@
 
 namespace Sigbits\RoombaLib\SCI;
 
+use Sigbits\RoombaLib\DataType\ByteInt;
+
 /**
  * Class Opcode
  * @package Sigbits\RoombaLib\SCI\Command
  */
-class Opcode
+class Opcode extends ByteInt
 {
     const START = 128;
 
@@ -46,29 +48,21 @@ class Opcode
     const FORCE_SEEKING_DOCK = 143;
 
     /**
-     * @var int
-     */
-    private $value;
-
-
-    /**
      * Opcode constructor.
      */
     public function __construct($value)
     {
-        $value = (int) $value;
-
-        if ($this->isValidOpcode($value)) {
-            $this->value = $value;
-        } else {
-            throw new \Exception('%d is not a valid Opcode value', $value);
+        if (false === $this->isValidOpcodeValue($value)) {
+            throw new \Exception('%s is not a valid Opcode value', $value());
         }
+
+        parent::__construct($value);
     }
 
     /**
      * @param $value
      */
-    private function isValidOpcode($value)
+    private function isValidOpcodeValue($value)
     {
         return (in_array(
             $value,
@@ -91,10 +85,5 @@ class Opcode
                 self::FORCE_SEEKING_DOCK,
             ]
         ));
-    }
-
-    public function getValue()
-    {
-        return $this->value;
     }
 }

@@ -1,6 +1,7 @@
 <?php
 namespace Sigbits\RoombaLib\SCI\Command;
 
+use Sigbits\RoombaLib\SCI\CommandData;
 use Sigbits\RoombaLib\SCI\Opcode;
 
 /**
@@ -13,8 +14,8 @@ class Sensors extends AbstractDataCommand
     /**
      * Sensors constructor.
      */
-    public function __construct($data)
+    public function __construct(CommandData $data)
     {
-        parent::__construct(new Opcode(Opcode::SENSORS, $data));
+        parent::__construct(new Opcode(Opcode::SENSORS), $data);
     }
 }
