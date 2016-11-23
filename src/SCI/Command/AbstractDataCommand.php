@@ -16,7 +16,7 @@ use Sigbits\RoombaLib\SCI\Command;
  * Class AbstractDataCommand
  * @package Sigbits\RoombaLib\SCI\Command
  */
-abstract class AbstractDataCommand implements Command
+abstract class AbstractDataCommand extends Command
 {
     /**
      * @var string $data
@@ -38,5 +38,13 @@ abstract class AbstractDataCommand implements Command
     public function getData()
     {
         return $this->data;
+    }
+
+    /**
+     * @return string
+     */
+    public function asByteString()
+    {
+        return pack("C*", $this->getOpcode() . $this->getData());
     }
 }

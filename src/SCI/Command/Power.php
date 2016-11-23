@@ -1,7 +1,7 @@
 <?php
 namespace Sigbits\RoombaLib\SCI\Command;
 
-use Sigbits\RoombaLib\Command\Opcode;
+use Sigbits\RoombaLib\SCI\Opcode;
 use Sigbits\RoombaLib\SCI\Command;
 
 /**
@@ -9,7 +9,7 @@ use Sigbits\RoombaLib\SCI\Command;
  * User: Maarten van Leeuwen <maarten@sigbits.nl>
  * Date: 22/11/2016
  */
-class Power implements Command
+class Power extends Command
 {
     /**
      * @return string represents a byte

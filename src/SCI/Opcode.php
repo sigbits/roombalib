@@ -5,7 +5,7 @@
  * Date: 22/11/2016
  */
 
-namespace Sigbits\RoombaLib\Command;
+namespace Sigbits\RoombaLib\SCI;
 
 /**
  * Class Opcode
