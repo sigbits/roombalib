@@ -5,15 +5,17 @@
  * Date: 22/11/2016
  */
 
-namespace Sigbits\RoombaLib\SCI;
+namespace Sigbits\RoombaLib\SCI\Command;
+
+use Sigbits\RoombaLib\SCI\Opcode;
 
 /**
  * Commands consist of a single byte opcode and optionally a string of databytes
  *
- * Interface Command
+ * abstract class AbstractCommand
  * @package Sigbits\RoombaLib
  */
-abstract class Command
+abstract class AbstractCommand
 {
     /**
      * @var int
@@ -27,6 +29,11 @@ abstract class Command
     public function __construct(Opcode $opcode)
     {
         $this->opcode = $opcode;
+    }
+
+    public function create($name)
+    {
+
     }
 
     /**

@@ -6,8 +6,7 @@
  */
 namespace Sigbits\RoombaLib\Socket;
 
-use Sigbits\RoombaLib\SCI\Command;
-use Sigbits\RoombaLib\SCI\Command\AbstractDataCommand;
+use Sigbits\RoombaLib\SCI\Command\AbstractCommand;
 
 /**
  * Represents a socket connection to a Roomba
@@ -16,6 +15,21 @@ use Sigbits\RoombaLib\SCI\Command\AbstractDataCommand;
  */
 class Connection
 {
+    /**
+     * @var string
+     */
+    private $host;
+
+    /**
+     * @var int
+     */
+    private $port;
+
+    /**
+     * @var bool
+     */
+    private $initialized;
+
     /**
      * @var resource
      */
@@ -37,22 +51,58 @@ class Connection
      * @param int $port
      * @param int $timeout
      */
-    public function __construct($host, $port = 9001, $timeout = 30)
+    public function __construct($host, $port = 9001)
+    {
+        $this->host = $host;
+        $this->port = $port;
+
+        $this->initialized = false;
+    }
+
+    /**
+     */
+    public function init()
     {
         $this->client = stream_socket_client(
-            sprintf('tcp://%s:%d',$host, $port),
+            sprintf('tcp://%s:%d',$this->host, $this->port),
             $errorNumber,
             $errorMessage
         );
+
+        $this->initialized = true;
 
         $this->lastErrorNumber = $errorNumber;
         $this->lastErrorMessage = $errorMessage;
     }
 
     /**
-     * @param Command $data
+     * @return bool
      */
-    public function write(Command $command)
+    public function isInitialized()
+    {
+        return $this->initialized;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLastErrorMessage()
+    {
+        return $this->lastErrorMessage;
+    }
+
+    /**
+     * @return int
+     */
+    public function getLastErrorNumber()
+    {
+        return $this->lastErrorNumber;
+    }
+
+    /**
+     * @param AbstractCommand $data
+     */
+    public function write(AbstractCommand $command)
     {
         fwrite($this->client, $command->asByteString());
     }

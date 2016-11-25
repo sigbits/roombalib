@@ -7,7 +7,6 @@
 
 namespace Sigbits\RoombaLib\SCI\Command;
 
-use Sigbits\RoombaLib\SCI\Command;
 use Sigbits\RoombaLib\SCI\CommandData;
 use Sigbits\RoombaLib\SCI\Opcode;
 
@@ -18,7 +17,7 @@ use Sigbits\RoombaLib\SCI\Opcode;
  * Class AbstractDataCommand
  * @package Sigbits\RoombaLib\SCI\Command
  */
-abstract class AbstractDataCommand extends Command
+abstract class AbstractDataCommand extends AbstractCommand
 {
     /**
      * @var CommandData $data
